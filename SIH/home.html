@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEDCARE PORTAL</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #f9fbff;
+      color: #333;
+    }
+
+    /* Navbar */
+    nav {
+      background: #0288d1;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+    }
+    nav h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li {
+      margin: 0 18px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: transform 0.3s, color 0.3s;
+    }
+    nav ul li:hover {
+      transform: scale(1.1);
+      color: #ffeb3b;
+    }
+
+    /* Highlight active page */
+    nav ul li.active a {
+      color: #ffeb3b;
+      font-weight: bold;
+      border-bottom: 3px solid #ffeb3b;
+    }
+
+    nav ul li a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Hero Banner with background */
+    .hero {
+      background: url('https://www.harrissa.in/images/slide01.jpg') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(2, 136, 209, 0.6); /* Overlay for readability */
+    }
+    .hero h2 {
+      font-size: 42px;
+      font-weight: bold;
+      z-index: 1;
+      animation: fadeInDown 2s;
+    }
+    .hero p {
+      font-size: 20px;
+      margin-top: 10px;
+      z-index: 1;
+      animation: fadeInUp 2s;
+    }
+
+    /* Section Styling */
+    .section {
+      padding: 70px 40px;
+      text-align: center;
+    }
+    .section h2 {
+      font-size: 32px;
+      color: #0288d1;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    .section h2::after {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background: #0288d1;
+      display: block;
+      margin: 8px auto 0;
+      border-radius: 2px;
+    }
+    .section p {
+      font-size: 18px;
+      max-width: 850px;
+      margin: auto;
+      line-height: 1.7;
+      color: #555;
+    }
+
+    /* Cards for Vision/Mission/About */
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 30px;
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      padding: 25px;
+      width: 280px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      margin: 10px 0;
+      color: #0288d1;
+    }
+
+    /* Login Section */
+    .login-section {
+      background: #e3f2fd;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .login-box {
+      background: #fff;
+      width: 350px;
+      margin: auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0px 6px 20px rgba(0,0,0,0.15);
+      animation: fadeIn 2s;
+    }
+    .login-box input {
+      width: 90%;
+      padding: 12px;
+      margin: 12px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .login-box button {
+      width: 95%;
+      padding: 12px;
+      background: #0288d1;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .login-box button:hover {
+      background: #01579b;
+    }
+
+    /* Footer */
+    footer {
+      background: #0288d1;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h1>MEDCARE</h1>
+    <ul>
+      <li class="active"><a href="home.html">Home</a></li>
+      <li><a href="Ambulance Nearby.html">Ambulance Nearby</a></li>
+      <li><a href="Support.html">Support</a></li>
+      <li><a href="Medicinedictionary.html">Medicinedictionary</a></li>
+      <li><a href="Medicine delivery.html">Medicine delivery</a></li>
+      <li><a href="organ-donor-recipient.html" class="active">Organ Donor & Recipient</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h2>Transforming Emergency Healthcare</h2>
+    <p>AI • ML • Blockchain for Faster, Smarter, Safer Solutions</p>
+  </div>
+
+  <!-- Vision, Mission, About Us -->
+  <div class="section">
+    <h2>Our Vision & Mission</h2>
+    <p>We strive to save lives by blending technology with healthcare, creating solutions that improve response times, guide people with AI-first aid, and build trust with secure donation systems.</p>
+    <div class="cards">
+      <div class="card">
+        <img src="https://img.freepik.com/premium-psd/magnificent-ambulance-isolated-transparent-background_1112209-3109.jpg?size=626&ext=jpg" alt="Ambulance">
+        <h3>Vision</h3>
+        <p>To become the leading platform integrating AI & Blockchain into emergency healthcare worldwide.</p>
+      </div>
+      <div class="card">
+        <img src="https://static.vecteezy.com/system/resources/previews/000/679/672/original/medical-health-care-icon.jpg" alt="Mission">
+        <h3>Mission</h3>
+        <p>To empower people with real-time support, faster ambulance access, and trustworthy donation networks.</p>
+      </div>
+      <div class="card">
+        <img src="https://img.icons8.com/color/100/group.png" alt="About Us">
+        <h3>About Us</h3>
+        <p>A passionate team of innovators solving real healthcare problems with AI-driven technology.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Section -->
+  <div class="login-section">
+    <h2>User Login</h2>
+    <div class="login-box">
+      <input type="text" placeholder="Enter Username">
+      <input type="password" placeholder="Enter Password">
+      <button>Login</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Healthcare Innovation Team | All Rights Reserved
+  </footer>
+
+</body>
+</html>

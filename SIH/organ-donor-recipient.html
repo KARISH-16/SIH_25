@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organ Donor & Recipient | MEDCARE</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f9fc;
+      color: #333;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: #0b7fc4;
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between; /* logo left, menu right */
+      align-items: center;
+    }
+
+    .navbar .logo {
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .navbar .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .navbar .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .navbar .menu a:hover {
+      color: #ffd400;
+    }
+
+    .navbar .menu a.active {
+      color: #ffd400;
+      font-weight: bold;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 40px 20px 20px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 32px;
+      color: #0b7fc4;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      color: #666;
+      font-size: 16px;
+    }
+
+    /* Content Area */
+    .container {
+      max-width: 700px;
+      margin: 20px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .section {
+      border: 1px solid #e3e7ec;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      background: #f9fcff;
+    }
+
+    .section h3 {
+      margin-top: 0;
+      color: #0b7fc4;
+      font-size: 18px;
+    }
+
+    .section p {
+      margin: 5px 0;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #0b7fc4;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+
+    .btn:hover {
+      background: #07689f;
+    }
+
+    .cart {
+      margin-top: 15px;
+      padding: 12px;
+      border: 2px dashed #a8d4f5;
+      background: #f0f9ff;
+      border-radius: 6px;
+      color: #385a64;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo">MEDCARE</div>
+    <div class="menu">
+      <a href="home.html">Home</a>
+      <a href="Ambulance Nearby.html">Ambulance Nearby</a>
+      <a href="Support.html">Support</a>
+      <a href="Medicinedictionary.html">Medicine Dictionary</a>
+      <a href="Medicine delivery.html">Medicine Delivery</a>
+      <a href="organ-donor-recipient.html" class="active">Organ Donor & Recipient</a>
+
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Organ Donor & Recipient</h1>
+    <p>Find available organs, register as a donor, or connect with recipients in need.</p>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="section">
+      <h3>Nearby Hospitals with Available Organs</h3>
+      <p><strong>Sample Hospital 1:</strong> Heart available</p>
+      <p>Location: Anna Nagar, Chennai</p>
+      <p>Contact: 98765 43210</p>
+      <a href="#" class="btn">Book Now</a>
+    </div>
+
+    <div class="section">
+      <h3>Recipient Request Posted</h3>
+      <p><strong>Sample User:</strong> Needs Kidney</p>
+      <p>Hospital: City Medical Center, Chennai</p>
+      <p>Status: Waiting for donor</p>
+      <a href="#" class="btn">View Profile</a>
+    </div>
+
+    <div class="section">
+      <h3>Be a Donor</h3>
+      <p>You can register as an organ donor at nearby hospitals. Your details will be stored in your profile.</p>
+      <a href="#" class="btn">Register as Donor</a>
+    </div>
+
+    <div class="cart">
+      <strong>🧾 Your Cart:</strong> No items added yet.
+    </div>
+  </div>
+
+</body>
+</html>
