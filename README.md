@@ -137,6 +137,4 @@ Lakshana V – lakshanavijayakumar717@gmail.com
 
 Geethapriya B – geethapriyawinner@gmail.com
 
-Project Link: GitHub Repository
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
