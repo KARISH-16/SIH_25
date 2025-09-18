@@ -137,4 +137,11 @@ Lakshana V – lakshanavijayakumar717@gmail.com
 
 Geethapriya B – geethapriyawinner@gmail.com
 
+LAKSHMI G-lakshmigv2006@gmail.com
+
+HARISH J-harishj2703@gmail.com
+
+DEV PRASATH S-ft.davee@gmail.com
+
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
